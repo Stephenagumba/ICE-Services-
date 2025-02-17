@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Ice Services</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+    .carousel-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      position: relative;
+    }
+    .carousel {
+      display: flex;
+      transition: transform 1s ease-in-out;
+    }
+    .carousel img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .services {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .services a {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+    }
+    .services img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s;
+    }
+    .services img:hover {
+      transform: scale(1.1);
+    }
+    .footer {
+      margin-top: 30px;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.8);
+      font-size: 0.9em;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.5em;
+      }
+      p {
+        font-size: 1em;
+      }
+      .services a {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>About Ice Services</h1>
+    <p>
+      Welcome to <strong>Ice Services</strong>, your go-to platform for affordable entertainment.
+      We specialize in providing premium SuperSport subscriptions at just <strong>1000 Ksh</strong>,
+      along with Netflix, Showmax, Prime Video, and many more accounts. Our mission is to make high-quality
+      movies and sports accessible to everyone at unbeatable prices.
+    </p>
+    
+    <!-- Image Carousel with platform logos -->
+    <div class="carousel-container">
+      <div class="carousel">
+        <img src="p.jpg" alt="DStv" />
+        <img src="n.jpg" alt="Netflix" />
+        <img src="im.jpg" alt="Showmax" />
+      </div>
+    </div>
+
+    <h2>Our Services</h2>
+    <!-- Services Icons Section -->
+    <div class="services">
+      <a href="https://www.dstv.com" target="_blank" title="DStv">
+        <img src="dstv.jpg" alt="DStv" />
+      </a>
+      <a href="https://www.netflix.com" target="_blank" title="Netflix">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" />
+      </a>
+      <a href="https://www.showmax.com" target="_blank" title="Showmax">
+        <img src="showmax.jpg" alt="Showmax" />
+      </a>
+      <a href="https://www.primevideo.com" target="_blank" title="Prime Video">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png" alt="Prime Video" />
+      </a>
+      <a href="https://www.hulu.com" target="_blank" title="Hulu">
+        <img src="hulu.jpg" alt="Hulu" />
+      </a>
+      <a href="https://www.hbomax.com" target="_blank" title="HBO Max">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" alt="HBO Max" />
+      </a>
+      <a href="https://www.tubitv.com" target="_blank" title="Tubi">
+        <img src="tubi.jpg" alt="Tubi" />
+      </a>
+      <a href="https://www.peacocktv.com" target="_blank" title="Peacock TV">
+        <img src="pick.jpg" alt="Peacock TV" />
+      </a>
+      <a href="https://www.optus.com.au/sport" target="_blank" title="Optus Sport">
+        <img src="opt.jpg" alt="Optus Sport" />
+      </a>
+      <a href="https://www.sling.com" target="_blank" title="Sling TV">
+        <img src="sling.jpg" alt="Sling TV" />
+      </a>
+      <a href="https://pluto.tv" target="_blank" title="Pluto TV">
+        <img src="pluto.jpg" alt="Pluto TV" />
+      </a>
+      <a href="#" target="_blank" title="MovieBox">
+        <img src="box.jpg" alt="MovieBox" />
+      </a>
+      <a href="https://www.m-net.com" target="_blank" title="M-Net">
+        <img src="net.jpg" alt="M-Net" />
+      </a>
+    </div>
+    
+    <p>
+      Join thousands of satisfied customers and enjoy non-stop entertainment with Ice Services today!
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    &copy; 2025 Ice Services. All rights reserved.
+  </div>
+
+  <script>
+    // Carousel script: cycles through 3 images every 10 seconds
+    let index = 0;
+    const carousel = document.querySelector(".carousel");
+    const totalImages = 3;
+
+    function changeImage() {
+      index = (index + 1) % totalImages;
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    setInterval(changeImage, 10000);
+  </script>
+</body>
+</html>
