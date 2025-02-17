@@ -6,6 +6,8 @@ define('COMMON_PASSWORD', 'pass@2025');
 date_default_timezone_set('Africa/Nairobi');  // Adjust as needed
 
 // Allowed phone numbers (normalized to start with "0")
+// Provided phone numbers (converted from +254 format)
+// Note: If a number does not start with 07 after conversion, review if it should be allowed.
 $allowedPhones = [
     "0706127473", // +254 706 127473
     "0728309076", // +254 728 309076
@@ -36,7 +38,7 @@ $allowedPhones = [
     "0715833067"  // +254 715 833067
 ];
 
-// Available emails list
+// Available emails list (as provided)
 $availableEmails = [
     "rotedamsteve95@gmail.com",
     "stevethopi234@gmail.com",
@@ -162,7 +164,7 @@ if (!$assignedEmail) {
 // Prepare the message with details
 $timeGenerated = date('Y-m-d H:i:s', $now);
 $message = "Dear $phone,\n";
-$message .= "Your new DStv logins are:\n";
+$message .= "Your new Dstv logins are:\n";
 $message .= "Email: $assignedEmail\n";
 $message .= "Password: " . COMMON_PASSWORD . "\n";
 $message .= "Logins generated on: $timeGenerated\n";

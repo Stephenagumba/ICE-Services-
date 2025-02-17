@@ -1,323 +1,300 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ice Services Login</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-  <style>
-    /* RESET */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    /* BODY & GLOBAL SETTINGS */
-    html, body {
-      height: 100%;
-      font-family: Arial, sans-serif;
-      background: url('im.gif') no-repeat center center fixed;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    /* NAVBAR */
-    .navbar {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 15px 30px;
-      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    .navbar .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #007bff;
-    }
-    
-    .navbar ul {
-      list-style: none;
-      display: flex;
-    }
-    
-    .navbar ul li { margin: 0 15px; }
-    
-    .navbar ul li a {
-      text-decoration: none;
-      color: #333;
-      font-size: 18px;
-      transition: color 0.3s;
-    }
-    
-    .navbar ul li a:hover { color: #007bff; }
-    
-    /* CONTAINER COMMON STYLE */
-    .container {
-      margin: 20px auto;
-      padding: 20px;
-      background: rgba(255,255,255,0.85);
-      border-radius: 10px;
-      width: 90%;
-      max-width: 600px;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    
-    h2 { color: #007bff; margin-bottom: 10px; }
-    
-    input, button {
-      font-size: 16px;
-    }
-    
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    
-    button {
-      background: #007bff;
-      color: white;
-      border: none;
-      padding: 12px;
-      width: 100%;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-    
-    button:hover { background: #0056b3; }
-    
-    /* MESSAGE DISPLAY */
-    #responseMessage {
-      margin-top: 20px;
-      padding: 15px;
-      border-radius: 5px;
-      display: none;
-      white-space: pre-line;
-    }
-    
-    /* WHY CHOOSE US */
-    .why-choose {
-      margin: 20px auto;
-      padding: 30px;
-      background: white;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 800px;
-      text-align: center;
-    }
-    
-    .features {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-    
-    .feature {
-      width: 45%;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    
-    .feature i {
-      font-size: 40px;
-      color: #007bff;
-      margin-bottom: 10px;
-    }
-    
-    /* OUR SERVICES */
-    .services {
-      margin: 20px auto;
-      padding: 30px;
-      background: white;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 800px;
-      text-align: center;
-    }
-    
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-    
-    .service-box {
-      padding: 20px;
-      border-radius: 10px;
-      background: rgba(0, 123, 255, 0.1);
-      text-align: center;
-    }
-    
-    /* FAQ SECTION */
-    .faq {
-      margin: 20px auto;
-      padding: 30px;
-      background: white;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 800px;
-      text-align: center;
-    }
-    
-    .faq-item {
-      text-align: left;
-      margin: 10px 0;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 10px;
-    }
-    
-    .faq-question {
-      font-weight: bold;
-      cursor: pointer;
-      color: #007bff;
-    }
-    
-    .faq-answer {
-      display: none;
-      margin-top: 5px;
-      padding-left: 10px;
-    }
-    
-    /* FOOTER */
-    .footer {
-      background: rgba(51, 51, 51, 0.9);
-      color: white;
-      text-align: center;
-      padding: 15px;
-      width: 100%;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+  <title>Ice Services Login</title>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>  
+  <style>  
+    /* RESET */  
+    * { margin: 0; padding: 0; box-sizing: border-box; }  /* BODY & GLOBAL SETTINGS */  
+html, body {  
+  height: 100%;  
+  font-family: Arial, sans-serif;  
+  background: url('im.gif') no-repeat center center fixed;  
+  background-size: cover;  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+}  
+  
+/* NAVBAR */  
+.navbar {  
+  width: 100%;  
+  max-width: 1200px;  
+  margin: 0 auto;  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+  background: rgba(255, 255, 255, 0.9);  
+  padding: 15px 30px;  
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);  
+}  
+  
+.navbar .logo {  
+  font-size: 24px;  
+  font-weight: bold;  
+  color: #007bff;  
+}  
+  
+.navbar ul {  
+  list-style: none;  
+  display: flex;  
+}  
+  
+.navbar ul li { margin: 0 15px; }  
+  
+.navbar ul li a {  
+  text-decoration: none;  
+  color: #333;  
+  font-size: 18px;  
+  transition: color 0.3s;  
+}  
+  
+.navbar ul li a:hover { color: #007bff; }  
+  
+/* CONTAINER COMMON STYLE */  
+.container {  
+  margin: 20px auto;  
+  padding: 20px;  
+  background: rgba(255,255,255,0.85);  
+  border-radius: 10px;  
+  width: 90%;  
+  max-width: 600px;  
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);  
+  text-align: center;  
+}  
+  
+h2 { color: #007bff; margin-bottom: 10px; }  
+  
+input, button {  
+  font-size: 16px;  
+}  
+  
+input {  
+  width: 100%;  
+  padding: 12px;  
+  margin: 10px 0;  
+  border: 1px solid #ccc;  
+  border-radius: 5px;  
+}  
+  
+button {  
+  background: #007bff;  
+  color: white;  
+  border: none;  
+  padding: 12px;  
+  width: 100%;  
+  cursor: pointer;  
+  border-radius: 5px;  
+  transition: background 0.3s;  
+}  
+  
+button:hover { background: #0056b3; }  
+  
+/* MESSAGE DISPLAY */  
+#responseMessage {  
+  margin-top: 20px;  
+  padding: 15px;  
+  border-radius: 5px;  
+  display: none;  
+  white-space: pre-line;  
+}  
+  
+/* WHY CHOOSE US */  
+.why-choose {  
+  margin: 20px auto;  
+  padding: 30px;  
+  background: white;  
+  border-radius: 10px;  
+  width: 90%;  
+  max-width: 800px;  
+  text-align: center;  
+}  
+  
+.features {  
+  display: flex;  
+  justify-content: space-around;  
+  flex-wrap: wrap;  
+}  
+  
+.feature {  
+  width: 45%;  
+  margin-bottom: 20px;  
+  text-align: center;  
+}  
+  
+.feature i {  
+  font-size: 40px;  
+  color: #007bff;  
+  margin-bottom: 10px;  
+}  
+  
+/* OUR SERVICES */  
+.services {  
+  margin: 20px auto;  
+  padding: 30px;  
+  background: white;  
+  border-radius: 10px;  
+  width: 90%;  
+  max-width: 800px;  
+  text-align: center;  
+}  
+  
+.services-grid {  
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
+  gap: 20px;  
+}  
+  
+.service-box {  
+  padding: 20px;  
+  border-radius: 10px;  
+  background: rgba(0, 123, 255, 0.1);  
+  text-align: center;  
+}  
+  
+/* FAQ SECTION */  
+.faq {  
+  margin: 20px auto;  
+  padding: 30px;  
+  background: white;  
+  border-radius: 10px;  
+  width: 90%;  
+  max-width: 800px;  
+  text-align: center;  
+}  
+  
+.faq-item {  
+  text-align: left;  
+  margin: 10px 0;  
+  border-bottom: 1px solid #ccc;  
+  padding-bottom: 10px;  
+}  
+  
+.faq-question {  
+  font-weight: bold;  
+  cursor: pointer;  
+  color: #007bff;  
+}  
+  
+.faq-answer {  
+  display: none;  
+  margin-top: 5px;  
+  padding-left: 10px;  
+}  
+  
+/* FOOTER */  
+.footer {  
+  background: rgba(51, 51, 51, 0.9);  
+  color: white;  
+  text-align: center;  
+  padding: 15px;  
+  width: 100%;  
+  margin-top: 20px;  
+}
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">Ice Services</div>
-    <ul>
-      <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
-      <li><a href="p.html"><i class="fa fa-info-circle"></i> About</a></li>
-    </ul>
-  </nav>
-
-  <!-- LOGIN BOX -->
-  <div class="container">
-    <h2>Enter Your Phone Number</h2>
-    <form id="loginForm">
-      <input type="text" id="phone" name="phone" placeholder="e.g. 0725014732 or +254725014732" required>
-      <button type="submit">Get Login</button>
-    </form>
-    <div id="responseMessage"></div>
-  </div>
-
-  <!-- WHY CHOOSE US -->
-  <div class="why-choose">
-    <h2>Why Choose Us?</h2>
-    <div class="features">
-      <div class="feature">
-        <i class="fa fa-bolt"></i>
-        <p>Fast &amp; Secure</p>
-      </div>
-      <div class="feature">
-        <i class="fa fa-money-bill-wave"></i>
-        <p>Affordable Plans</p>
-      </div>
-      <div class="feature">
-        <i class="fa fa-headset"></i>
-        <p>24/7 Support</p>
-      </div>
-      <div class="feature">
-        <i class="fa fa-thumbs-up"></i>
-        <p>Trusted by Thousands</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- OUR SERVICES -->
-  <div class="services">
-    <h2>Our Services</h2>
-    <div class="services-grid">
-      <div class="service-box">DStv Account Management</div>
-      <div class="service-box">Subscription Renewals</div>
-      <div class="service-box">Technical Support</div>
-      <div class="service-box">Special Offers</div>
-    </div>
-  </div>
-
-  <!-- FAQ SECTION -->
-  <div class="faq">
-    <h2>FAQs</h2>
-    <div class="faq-item">
-      <p class="faq-question" onclick="toggleFAQ(this)">How do I log in?</p>
-      <p class="faq-answer">Enter your phone number to receive your login details via our system.</p>
-    </div>
-    <div class="faq-item">
-      <p class="faq-question" onclick="toggleFAQ(this)">Are the logins secure?</p>
-      <p class="faq-answer">Yes, our logins are generated securely and can be reused for 30 days.</p>
-    </div>
-    <div class="faq-item">
-      <p class="faq-question" onclick="toggleFAQ(this)">Can I share my login details?</p>
-      <p class="faq-answer">No, sharing of login details is strictly prohibited.</p>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2025 Ice Services. All Rights Reserved.</p>
-  </footer>
-
-  <script>
-    // Handle login form submission
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-      event.preventDefault();
+  </style>  
+</head>  
+<body>    <!-- NAVBAR -->    <nav class="navbar">  
+    <div class="logo">Ice Services</div>  
+    <ul>  
+      <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>  
+      <li><a href="p.html"><i class="fa fa-info-circle"></i> About</a></li>  
+    </ul>  
+  </nav>    <!-- LOGIN BOX -->    <div class="container">  
+    <h2>Enter Your Phone Number</h2>  
+    <form id="loginForm">  
+      <input type="text" id="phone" name="phone" placeholder="e.g. 0725014732 or +254725014732" required>  
+      <button type="submit">Get Login</button>  
+    </form>  
+    <div id="responseMessage"></div>  
+  </div>    <!-- WHY CHOOSE US -->    <div class="why-choose">  
+    <h2>Why Choose Us?</h2>  
+    <div class="features">  
+      <div class="feature">  
+        <i class="fa fa-bolt"></i>  
+        <p>Fast &amp; Secure</p>  
+      </div>  
+      <div class="feature">  
+        <i class="fa fa-money-bill-wave"></i>  
+        <p>Affordable Plans</p>  
+      </div>  
+      <div class="feature">  
+        <i class="fa fa-headset"></i>  
+        <p>24/7 Support</p>  
+      </div>  
+      <div class="feature">  
+        <i class="fa fa-thumbs-up"></i>  
+        <p>Trusted by Thousands</p>  
+      </div>  
+    </div>  
+  </div>    <!-- OUR SERVICES -->    <div class="services">  
+    <h2>Our Services</h2>  
+    <div class="services-grid">  
+      <div class="service-box">DStv Account Management</div>  
+      <div class="service-box">Subscription Renewals</div>  
+      <div class="service-box">Technical Support</div>  
+      <div class="service-box">Special Offers</div>  
+    </div>  
+  </div>    <!-- FAQ SECTION -->    <div class="faq">  
+    <h2>FAQs</h2>  
+    <div class="faq-item">  
+      <p class="faq-question" onclick="toggleFAQ(this)">How do I log in?</p>  
+      <p class="faq-answer">Enter your phone number to receive your login details via our system.</p>  
+    </div>  
+    <div class="faq-item">  
+      <p class="faq-question" onclick="toggleFAQ(this)">Are the logins secure?</p>  
+      <p class="faq-answer">Yes, our logins are generated securely and can be reused for 30 days.</p>  
+    </div>  
+    <div class="faq-item">  
+      <p class="faq-question" onclick="toggleFAQ(this)">Can I share my login details?</p>  
+      <p class="faq-answer">No, sharing of login details is strictly prohibited.</p>  
+    </div>  
+  </div>    <!-- FOOTER -->    <footer class="footer">  
+    <p>© 2025 Ice Services. All Rights Reserved.</p>  
+  </footer>    <script>  
+    // Handle login form submission  
+    document.getElementById('loginForm').addEventListener('submit', function(event) {  
+      event.preventDefault();  
+        
+      const phone = document.getElementById('phone').value.trim();  
+      if (phone === '') {  
+        alert('Please enter your phone number.');  
+        return;  
+      }  
+        
+      // Prepare JSON payload  
+      const payload = { phone: phone };  
+        
+      // Send POST request to backend.php  
+      fetch('http://192.168.0.101:8080/backend.php', {
+        method: 'POST',  
+        headers: { 'Content-Type': 'application/json' },  
+        body: JSON.stringify(payload)  
+      })  
+      .then(response => response.json())  
+      .then(data => {  
+        const responseDiv = document.getElementById('responseMessage');  
+        if (data.status === 'success') {  
+          responseDiv.style.backgroundColor = '#d4edda';  
+          responseDiv.style.color = '#155724';  
+        } else {  
+          responseDiv.style.backgroundColor = '#f8d7da';  
+          responseDiv.style.color = '#721c24';  
+        }  
+        responseDiv.textContent = data.message;  
+        responseDiv.style.display = 'block';  
+      })  
+      .catch(error => {  
+        console.error('Error:', error);  
+        alert('An error occurred. Please try again later.');  
+      });  
+    });  
       
-      const phone = document.getElementById('phone').value.trim();
-      if (phone === '') {
-        alert('Please enter your phone number.');
-        return;
-      }
-      
-      // Prepare JSON payload
-      const payload = { phone: phone };
-      
-      // Send POST request to backend.php
-      fetch('backend.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      })
-      .then(response => response.json())
-      .then(data => {
-        const responseDiv = document.getElementById('responseMessage');
-        if (data.status === 'success') {
-          responseDiv.style.backgroundColor = '#d4edda';
-          responseDiv.style.color = '#155724';
-        } else {
-          responseDiv.style.backgroundColor = '#f8d7da';
-          responseDiv.style.color = '#721c24';
-        }
-        responseDiv.textContent = data.message;
-        responseDiv.style.display = 'block';
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('An error occurred. Please try again later.');
-      });
-    });
-    
-    // FAQ toggle functionality
-    function toggleFAQ(element) {
-      const answer = element.nextElementSibling;
-      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
-</body>
+    // FAQ toggle functionality  
+    function toggleFAQ(element) {  
+      const answer = element.nextElementSibling;  
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';  
+    }  
+  </script>  </body>  
 </html>
