@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ice Services Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Ice Services</div>
+    <ul>
+      <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="about.html"><i class="fa fa-info-circle"></i> About</a></li>
+    </ul>
+  </nav>
+
+  <!-- LOGIN BOX -->
+  <div class="container">
+    <h2>Enter Your Phone Number</h2>
+    <form id="loginForm">
+      <input type="text" id="phone" name="phone" placeholder="e.g. 0725014732 or +254725014732" required>
+      <button type="submit">Get Login</button>
+    </form>
+    <div id="responseMessage"></div>
+  </div>
+
+  <!-- WHY CHOOSE US -->
+  <div class="why-choose">
+    <h2>Why Choose Us?</h2>
+    <div class="features">
+      <div class="feature"><i class="fa fa-bolt"></i><p>Fast & Secure</p></div>
+      <div class="feature"><i class="fa fa-money-bill-wave"></i><p>Affordable Plans</p></div>
+      <div class="feature"><i class="fa fa-headset"></i><p>24/7 Support</p></div>
+      <div class="feature"><i class="fa fa-thumbs-up"></i><p>Trusted by Thousands</p></div>
+    </div>
+  </div>
+
+  <!-- OUR SERVICES -->
+  <div class="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-box">DStv Account Management</div>
+      <div class="service-box">Subscription Renewals</div>
+      <div class="service-box">Technical Support</div>
+      <div class="service-box">Special Offers</div>
+    </div>
+  </div>
+
+  <!-- FAQ SECTION -->
+  <div class="faq">
+    <h2>FAQs</h2>
+    <div class="faq-item">
+      <p class="faq-question" onclick="toggleFAQ(this)">How do I log in?</p>
+      <p class="faq-answer">Enter your phone number to receive your login details via our system.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question" onclick="toggleFAQ(this)">Are the logins secure?</p>
+      <p class="faq-answer">Yes, our logins are generated securely and can be reused for 30 days.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question" onclick="toggleFAQ(this)">Can I share my login details?</p>
+      <p class="faq-answer">No, sharing of login details is strictly prohibited.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Ice Services. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
